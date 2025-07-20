@@ -1,0 +1,9 @@
+/* RESET */
+@use 'reset';
+
+/* MAIN STYLES */
+@use 'var';
+@use 'style/index.scss' as *;
+
+@use 'global';
+@use 'comp/index.scss';

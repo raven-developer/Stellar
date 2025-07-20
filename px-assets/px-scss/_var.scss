@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url('../px-fonts/HKGrotesk-SemiBold.woff2') format('woff2'), url('../px-fonts/HKGrotesk-SemiBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url('../px-fonts/HKGrotesk-Medium.woff2') format('woff2'), url('../px-fonts/HKGrotesk-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url('../px-fonts/HKGrotesk-Regular.woff2') format('woff2'), url('../px-fonts/HKGrotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../px-fonts/Inter18pt-SemiBold.woff2') format('woff2'), url('../px-fonts/Inter18pt-SemiBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../px-fonts/Inter18pt-Medium.woff2') format('woff2'), url('../px-fonts/Inter18pt-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../px-fonts/Inter18pt-Regular.woff2') format('woff2'), url('../px-fonts/Inter18pt-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --par-font: 'Inter', sans-serif;
+  --heading-font: 'HK Grotesk', sans-serif;
+  --p-color: var(--black-90);
+  --h-color: var(--black);
+  /* Color */
+  --purple-100: #6e51e0;
+  --purple-100-hex: #6e51e0;
+  --purple-100-rgb: 110, 81, 224;
+  --purple-90: #a259ff;
+  --purple-90-rgb: 162, 89, 255;
+  --purple-10: #e8e5f8;
+  --purple-10-rgb: 232, 229, 248;
+  --black: #060b13;
+  --black-90: #363d4f;
+  --black-90-rgb: 54, 61, 79;
+  --black-10: #f7f8fa;
+  --black-10-rgb: 247, 248, 250;
+
+  /* Gradient */ 
+  --light-color-gradient: 167, 148, 236;
+  --dark-color-gradient: 110, 81, 223
+
+  --base-size: 16px;
+}

@@ -1,0 +1,70 @@
+@use 'style/index.scss' as *;
+
+[data-variant='white'] {
+  background-color: white;
+}
+
+[data-variant='off-white'] {
+  background-color: var(--black-10);
+}
+
+.px-section {
+  width: 100%;
+
+  &--sm {
+    padding-block: 60px;
+  }
+
+  &--base {
+    padding-block: 120px;
+  }
+
+  &--lg {
+    padding-block: 140px;
+  }
+}
+
+.px-container {
+  width: 100%;
+  margin-inline: auto;
+
+  &--sm {
+    max-width: 800px;
+  }
+
+  &--md {
+    max-width: 1080px;
+  }
+
+  &--base {
+    max-width: 1140px;
+  }
+
+  &--lg {
+    max-width: 1280px;
+  }
+
+  &--full {
+    max-width: 100%;
+  }
+
+  @include min-1440 {
+    padding-inline: 0;
+  }
+
+  @include max-1440 {
+    padding-inline: 120px;
+  }
+
+  @include max-1024 {
+    padding-inline: 80px;
+  }
+
+  @include max-768 {
+    padding-inline: 40px;
+  }
+
+  @include max-767 {
+    padding-inline: 16px;
+  }
+}

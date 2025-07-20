@@ -1,0 +1,31 @@
+{
+  "name": "stellar",
+  "version": "1.0.0",
+  "description": "Stellar is more than just a SaaS and technology template—it's a complete digital transformation solution.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch px-assets/px-scss/main.scss:px-assets/px-css/main.css --source-map --style=compressed",
+    "build": "sass px-assets/px-scss/main.scss:px-assets/px-css/main.css --no-source-map --style=compressed",
+    "serve": "live-server .",
+    "start": "concurrently \"npm:serve\" \"npm:watch\"",
+    "kill": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raven-developer/Stellar.git"
+  },
+  "author": "Pix.l",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raven-developer/Stellar/issues"
+  },
+  "homepage": "https://github.com/raven-developer/Stellar#readme",
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "sass": "^1.89.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
