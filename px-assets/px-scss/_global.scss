@@ -28,6 +28,10 @@
   width: 100%;
   margin-inline: auto;
 
+  &--xs {
+    max-width: 800px;
+  }
+
   &--sm {
     max-width: 800px;
   }
@@ -66,5 +70,28 @@
 
   @include max-767 {
     padding-inline: 16px;
+  }
+}
+
+.px-wrapper {
+  &--500 {
+    width: 500;
+    margin-inline: auto;
+  }
+
+  &--base {
+    width: 100%;
+  }
+
+  &--flex-7 {
+    flex: 0.7;
+  }
+
+  &--flex-6 {
+    flex: 0.6;
+  }
+
+  &--flex-5 {
+    flex: 0.5;
   }
 }

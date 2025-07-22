@@ -33,3 +33,28 @@
     @content;
   }
 }
+
+/*
+*
+* font-size: clamp(MIN, PREFERRED, MAX)
+*
+*/
+@mixin px-par($color) {
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: $color;
+  font-optical-sizing: auto;
+  text-transform: none;
+  text-decoration: none;
+}
+
+@mixin px-head($color) {
+  font-family: 'HK Grotesk', sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  color: $color;
+  font-optical-sizing: auto;
+  text-transform: none;
+  text-decoration: none;
+}

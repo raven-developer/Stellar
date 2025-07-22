@@ -1,0 +1,37 @@
+@use 'mixins' as *;
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include px-head(var(--black));
+  font-size: clamp(1rem, 2vw, 1rem);
+}
+
+p {
+  @include px-par(var(--black-90));
+  letter-spacing: -0.18px;
+}
+
+.px-section {
+  &__title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  &__heading {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: 2rem;
+  }
+
+  &__par {
+    font-size: clamp(0.93rem, 2vw, 1rem);
+    margin-bottom: 2rem;
+  }
+}
