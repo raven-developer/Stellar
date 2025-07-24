@@ -51,6 +51,7 @@
   --heading-font: 'HK Grotesk', sans-serif;
   --p-color: var(--black-90);
   --h-color: var(--black);
+  --primary: var(--purple-100);
   /* Color */
   --purple-100: #6e51e0;
   --purple-100-hex: #6e51e0;
@@ -66,8 +67,8 @@
   --black-10-rgb: 247, 248, 250;
 
   /* Gradient */
-  --light-color-gradient: 167, 148, 236;
-  --dark-color-gradient: 110, 81, 223;
+  --light-color-gradient: #a794ec; //167, 148, 236;
+  --dark-color-gradient: #6e51df; //110, 81, 223
 
   --base-size: 16px;
 }
