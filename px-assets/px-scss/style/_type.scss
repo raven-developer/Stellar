@@ -26,8 +26,12 @@ p {
   }
 
   &__heading {
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 2rem;
+
+    &.px-sm {
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    }
   }
 
   &__par {
@@ -36,7 +40,7 @@ p {
   }
 
   &__sub {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1rem, 2vw, 1.125rem);
     margin-bottom: 2rem;
   }
 

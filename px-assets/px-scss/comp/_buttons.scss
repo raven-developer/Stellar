@@ -1,0 +1,54 @@
+@use '../style' as *;
+
+.px-button {
+  display: block;
+  padding: 17px 24px 18px;
+  border-radius: 50px;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  transform: translateY(0);
+  box-shadow: rgba(17, 12, 46, 0) 0px 0px 0 0px;
+  transition: 275ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &__text {
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  &:not(&--white):hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(17, 12, 46, 0.19) 0px 10px 45px 0px;
+  }
+
+  &--solid {
+    background-color: var(--primary);
+
+    .px-button__text {
+      color: white;
+      letter-spacing: 0.3px;
+    }
+
+    &:hover {
+      background-color: var(--black);
+    }
+  }
+
+  &--white {
+    background-color: white;
+    border: 1px solid var(--purple-10);
+
+    .px-button__text {
+      color: var(--primary);
+      letter-spacing: 0.3px;
+    }
+
+    &:hover {
+      background-color: var(--black);
+      border-color: var(--black);
+      .px-button__text {
+        color: white;
+      }
+    }
+  }
+}

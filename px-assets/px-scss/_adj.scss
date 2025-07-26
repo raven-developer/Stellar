@@ -1,0 +1,72 @@
+@use 'style' as *;
+
+/*
+ * Hero Images css
+ */
+
+.px-hero-image-wrapper {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+
+.px-hero {
+  position: relative;
+  height: 445px;
+
+  &--img:not(.px-hero__phone-img) {
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: rgba(6, 11, 19, 0.08) 0px 12px 96px 0px;
+  }
+
+  &__phone-img {
+    max-height: 445px;
+    max-width: 448px;
+    object-fit: cover;
+    object-position: top center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__tl-img {
+    max-width: 176px;
+    max-height: 176px;
+    @include min-1440 {
+      top: -7%;
+      left: 10%;
+    }
+  }
+
+  &__bl-img {
+    max-width: 280px;
+    max-height: 248px;
+    transform: scale(1.1);
+    bottom: 0;
+    left: 0;
+    @include min-1440 {
+      bottom: -5%;
+      left: -4%;
+    }
+  }
+
+  &__tr-img {
+    max-width: 176px;
+    max-height: 176px;
+    transform: scale(1.2);
+    @include min-1440 {
+      top: -15%;
+      right: 5%;
+    }
+  }
+
+  &__br-img {
+    max-width: 280px;
+    max-height: 248px;
+    @include min-1440 {
+      bottom: -2%;
+      right: -4%;
+    }
+  }
+}

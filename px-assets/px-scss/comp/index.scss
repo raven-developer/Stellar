@@ -1,9 +1,10 @@
 @forward 'buttons';
 @forward 'card';
-@forward 'states';
+@forward 'carousel';
 
 .is_textcenter > * {
   text-align: center;
+  margin-inline: auto;
 }
 
 .is_highlighted {

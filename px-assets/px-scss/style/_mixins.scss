@@ -58,3 +58,13 @@
   text-transform: none;
   text-decoration: none;
 }
+
+@mixin px-btn-txt($color) {
+  font-weight: bold;
+  line-height: 1;
+  color: $color;
+  font-size: 1px;
+  font-optical-sizing: auto;
+  text-transform: none;
+  text-decoration: none;
+}

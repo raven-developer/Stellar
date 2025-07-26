@@ -24,3 +24,8 @@ yarn-error.log*
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+#DONT UPLOAD
+sections.html
+style.html
+demo.html

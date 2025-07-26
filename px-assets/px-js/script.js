@@ -40,6 +40,17 @@ document.addEventListener('DOMContentLoaded', async function () {
   } catch (error) {
     console.error('Component Not Found: ', error);
   }
+
+  try {
+    const carousel = document.getElementById('px-carousel-wrapper');
+    const items = Array.from(carousel.children);
+
+    // Clone and append each item
+    items.forEach((item) => {
+      const clone = item.cloneNode(true);
+      carousel.appendChild(clone);
+    });
+  } catch (error) {}
 });
 
 // Popstate listener handles back/forward browser buttons
