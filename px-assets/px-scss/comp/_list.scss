@@ -1,0 +1,48 @@
+@use '../style' as *;
+
+.px-icon-list-wrapper {
+  margin-left: 20px;
+  margin-bottom: 1.5rem;
+}
+.px-list {
+  display: flex;
+  list-style-type: disc; //default
+
+  &--row {
+    flex-direction: row;
+  }
+
+  &--col {
+    flex-direction: column;
+  }
+
+  li {
+    margin: unset;
+    margin-block: 0.5rem;
+  }
+}
+
+.px-marker {
+  &--cst {
+    list-style: none;
+
+    li {
+      padding-left: 8px;
+    }
+  }
+
+  &--check li::before {
+    content: '';
+    background-image: url('/px-uploads/icons/checkmark.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+  }
+}

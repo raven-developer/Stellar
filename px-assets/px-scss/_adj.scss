@@ -5,7 +5,6 @@
  */
 
 .px-hero-image-wrapper {
-  position: relative;
   height: 100%;
   z-index: 1;
 }
@@ -15,9 +14,7 @@
   height: 445px;
 
   &--img:not(.px-hero__phone-img) {
-    position: absolute;
     border-radius: 12px;
-    box-shadow: rgba(6, 11, 19, 0.08) 0px 12px 96px 0px;
   }
 
   &__phone-img {
@@ -69,4 +66,23 @@
       right: -4%;
     }
   }
+}
+
+.px-section-id-h1s2 {
+  padding-block: 90px;
+}
+
+.img-4642 {
+  top: 0;
+  left: -3%;
+}
+
+.img-4643 {
+  bottom: 0;
+  right: 0;
+}
+
+.img-4644 {
+  left: 5%;
+  bottom: 15%;
 }
