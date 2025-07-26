@@ -52,4 +52,10 @@ p {
     color: var(--primary);
     margin-bottom: 0.8rem;
   }
+
+  &__note {
+    font-size: clamp(0.63rem, 2vw, 0.93rem);
+    margin-top: 1rem;
+    color: rgba(var(--black-90-rgb), 0.8);
+  }
 }

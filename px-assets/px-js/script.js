@@ -42,6 +42,21 @@ document.addEventListener('DOMContentLoaded', async function () {
   }
 
   try {
+    const bgImageTop = document.querySelector('.px-background--top');
+    const bgImageBtm = document.querySelector('.px-background--btm');
+
+    if (!bgImageTop || !bgImageBtm) {
+      throw new Error('Section Found');
+    } else {
+      bgImageTop.style.backgroundImage = 'url("px-uploads/image/background-top.png")';
+
+      bgImageBtm.style.backgroundImage = 'url("px-uploads/image/background-bottom.png")';
+    }
+  } catch (error) {
+    console.error('Component Not Found: ', error);
+  }
+
+  try {
     const carousel = document.getElementById('px-carousel-wrapper');
     const items = Array.from(carousel.children);
 

@@ -23,7 +23,7 @@
     object-fit: cover;
     object-position: top center;
     top: 0;
-    left: 50%;
+    left: calc(50% + 7px);
     transform: translateX(-50%);
   }
 
@@ -85,4 +85,18 @@
 .img-4644 {
   left: 5%;
   bottom: 15%;
+}
+
+.img-4645 {
+  @extend .img-4643;
+}
+
+.img-4646 {
+  top: 0;
+  left: -5%;
+}
+
+.img-4647 {
+  top: 18%;
+  right: 10%;
 }

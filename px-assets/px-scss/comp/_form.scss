@@ -1,0 +1,32 @@
+@use '../style' as *;
+
+.px-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 1rem;
+
+  &__button {
+    margin: unset;
+    width: unset;
+  }
+
+  &__field {
+    padding: 17px 24px 18px;
+    border: 1px solid var(--purple-10);
+    background-color: white;
+    border-radius: 50px;
+    z-index: 1;
+    color: var(--black);
+    transition: border-color 0.3s ease;
+
+    &:focus,
+    &:hover {
+      border-color: var(--primary);
+    }
+
+    &::placeholder {
+      color: var(--black-30);
+    }
+  }
+}
