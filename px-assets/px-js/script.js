@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       if (!heroBg) {
         throw new Error('Hero Background Section');
       } else {
-        heroBg.style.backgroundImage = 'url("/px-uploads/image/background.jpg")';
+        heroBg.style.backgroundImage = 'url("px-uploads/image/background.jpg")';
         heroBg.style.backgroundRepeat = 'no-repeat';
         heroBg.style.backgroundPosition = 'center';
         heroBg.style.backgroundSize = 'cover';
