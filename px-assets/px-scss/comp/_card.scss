@@ -1,0 +1,45 @@
+@use '../style' as *;
+
+/* BASE CARD STYLES */
+.px-card {
+  display: flex;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__title-block {
+    display: flex;
+
+    &--row {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &--col {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  &__icon-sm {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+  }
+}
+
+/* CARD TYPES */
+.px-card {
+  &--feature {
+    flex-direction: column;
+
+    .px-card__title-block {
+      margin-block: 1.5rem 1rem;
+    }
+  }
+}
