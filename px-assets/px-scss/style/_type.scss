@@ -43,6 +43,10 @@ p {
   &__par {
     font-size: clamp(0.93rem, 2vw, 1rem);
     margin-bottom: 2rem;
+
+    &--sm {
+      font-size: clamp(0.8rem, 2vw, 0.93rem);
+    }
   }
 
   &__sub {
