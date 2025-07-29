@@ -82,3 +82,31 @@ $gap-values: 0, 4, 5, 10, 15, 16, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75
     gap: #{$gap}px;
   }
 }
+
+@keyframes px-beat {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes px-pulse-wave {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.9);
+    opacity: 0;
+  }
+}
