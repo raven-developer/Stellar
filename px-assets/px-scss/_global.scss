@@ -51,7 +51,7 @@
   margin-inline: auto;
 
   &--xs {
-    max-width: 800px;
+    max-width: 500px;
   }
 
   &--sm {
@@ -221,6 +221,14 @@
   }
 }
 
-.px-beat {
-  animation: px-pulse-wave 3s infinite;
+.px-circle-pulse {
+  max-height: 132px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  background: radial-gradient(circle at center, rgba(110, 81, 223, 0.3) -10%, rgba(255, 255, 255, 0) 100%);
 }

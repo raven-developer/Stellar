@@ -65,6 +65,8 @@
   --black-90-rgb: 54, 61, 79;
   --black-30: #979fb4;
   --black-30-rgb: 151, 159, 180;
+  --black-20: #e9ebf1;
+  --black-20-rgb: 233, 235, 241;
   --black-10: #f7f8fa;
   --black-10-rgb: 247, 248, 250;
 
@@ -97,16 +99,12 @@ $gap-values: 0, 4, 5, 10, 15, 16, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75
 
 @keyframes px-pulse-wave {
   0% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0.8);
     opacity: 1;
   }
 
-  70% {
-    transform: translate(-50%, -50%) scale(1.8);
-    opacity: 0.2;
-  }
   100% {
-    transform: translate(-50%, -50%) scale(1.9);
+    transform: translate(-50%, -50%) scale(2.5);
     opacity: 0;
   }
 }

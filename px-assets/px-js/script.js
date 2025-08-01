@@ -42,15 +42,21 @@ document.addEventListener('DOMContentLoaded', async function () {
   }
 
   try {
-    const bgImageTop = document.querySelector('.px-background--top');
-    const bgImageBtm = document.querySelector('.px-background--btm');
+    const bgImageTop = document.querySelectorAll('.px-background--top');
+    const bgImageBtm = document.querySelectorAll('.px-background--btm');
 
     if (!bgImageTop || !bgImageBtm) {
       throw new Error('Section Found');
     } else {
-      bgImageTop.style.backgroundImage = 'url("px-uploads/image/background-top.png")';
+      bgImageTop.forEach((el) => {
+        el.style.backgroundImage = 'url("px-uploads/image/background-top.png")';
+        el.style.opacity = '0.8';
+      });
 
-      bgImageBtm.style.backgroundImage = 'url("px-uploads/image/background-bottom.png")';
+      bgImageBtm.forEach((el) => {
+        el.style.backgroundImage = 'url("px-uploads/image/background-bottom.png")';
+        el.style.opacity = '0.8';
+      });
     }
   } catch (error) {
     console.error('Component Not Found: ', error);

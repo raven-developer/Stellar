@@ -114,3 +114,11 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
+
+.pulse-1 {
+  animation: px-pulse-wave 2s ease-in-out infinite;
+}
+
+.pulse-2 {
+  animation: px-pulse-wave 2s 1s ease-in-out infinite;
+}
