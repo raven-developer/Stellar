@@ -153,4 +153,59 @@
       }
     }
   }
+
+  &--blog {
+    flex-direction: column;
+    gap: 2rem;
+    cursor: pointer;
+
+    &__category-block {
+      margin-bottom: 0.75rem;
+    }
+
+    &__details {
+      margin-bottom: 2rem;
+    }
+
+    &__title {
+      margin-bottom: 0.75rem;
+    }
+
+    &__image-block {
+      width: 100%;
+      aspect-ratio: 1.15;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 2px solid var(--black-20);
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 24px;
+        border: 6px solid white;
+        z-index: 1;
+      }
+    }
+
+    &__featured-image {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &__category-item {
+      font-size: 0.75rem;
+      letter-spacing: 0.2px;
+      padding: 5px 8px 4px;
+      background-color: var(--black-10);
+      width: max-content;
+      border-radius: 100px;
+    }
+
+    &__button {
+      padding: 0.75rem 1rem;
+      margin: unset;
+    }
+  }
 }
