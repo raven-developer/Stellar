@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Initial load logic
     if (pageData === 'home' || path === '/home/' || path === '/home/index.html') {
       await loadHome();
+      masonryJS();
     }
 
     // Attach event to nav link AFTER DOM is ready
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         e.preventDefault();
         history.pushState(null, '', '/home/');
         await loadHome();
+        masonryJS();
       });
     }
   } catch (error) {
@@ -41,6 +43,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     console.error('Component Not Found: ', error);
   }
 
+  // FOR BACKGROUND IMAGES
   try {
     const bgImageTop = document.querySelectorAll('.px-background--top');
     const bgImageBtm = document.querySelectorAll('.px-background--btm');

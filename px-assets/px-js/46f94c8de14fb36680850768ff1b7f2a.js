@@ -21,3 +21,21 @@ async function loadHome() {
     console.error('Error on Loading Content: ', error);
   }
 }
+
+function masonryJS() {
+  const grid = document.querySelector('.px-testimonial-wrapper');
+
+  if (grid) {
+    imagesLoaded(grid, function () {
+      new Masonry(grid, {
+        itemSelector: '.px-card--testimonial',
+        columnWidth: '.px-card--width',
+        percentPosition: true,
+        gutter: 20,
+        containerStyle: null,
+      });
+    });
+  } else {
+    console.error('Grid element not found!');
+  }
+}
