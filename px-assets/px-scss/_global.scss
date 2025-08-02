@@ -82,10 +82,6 @@
     padding-inline: 0;
   }
 
-  @include max-1440 {
-    padding-inline: 120px;
-  }
-
   @include max-1024 {
     padding-inline: 80px;
   }

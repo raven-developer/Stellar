@@ -122,3 +122,12 @@
 .pulse-2 {
   animation: px-pulse-wave 2s 1s ease-in-out infinite;
 }
+
+.px-section-cta {
+  .px-section__heading {
+    margin-bottom: 1.5rem;
+  }
+  .px-section__par:not(.px-section__topl) {
+    margin: unset;
+  }
+}
