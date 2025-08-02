@@ -102,6 +102,10 @@
 .px-wrapper {
   flex: 1;
 
+  &__inner-right {
+    flex: 0.7;
+  }
+
   &--xxs {
     max-width: 400px;
   }
@@ -119,6 +123,12 @@
     width: 100%;
   }
 
+  &--row {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
   &--flex-7 {
     flex: 0.7;
   }
@@ -129,6 +139,16 @@
 
   &--flex-5 {
     flex: 0.5;
+  }
+}
+
+.wrapper {
+  &--rel {
+    position: relative;
+  }
+
+  &--abs {
+    position: absolute;
   }
 }
 
@@ -186,16 +206,6 @@
   }
   &--btm {
     bottom: 0;
-  }
-}
-
-.wrapper {
-  &--rel {
-    position: relative;
-  }
-
-  &--abs {
-    position: absolute;
   }
 }
 
