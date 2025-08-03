@@ -1,0 +1,25 @@
+.px-container--nav {
+  padding: 18px 24px;
+  border-radius: 100px;
+  background-color: white;
+  box-shadow: rgba(17, 12, 46, 0.05) 0px 10px 45px 0px;
+}
+
+.px-nav {
+  &__content-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .px-button,
+  .px-section__par {
+    margin: unset;
+  }
+
+  &__button.px-button:hover {
+    transform: unset;
+    box-shadow: unset;
+  }
+}

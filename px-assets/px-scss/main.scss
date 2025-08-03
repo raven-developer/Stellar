@@ -6,5 +6,7 @@
 @use 'style/index.scss' as *;
 
 @use 'global';
-@use 'adj';
 @use 'comp/index.scss';
+@use 'nav';
+
+@use 'adj';

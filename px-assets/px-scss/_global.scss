@@ -21,7 +21,6 @@
     padding-block: 210px 0;
     margin-bottom: 34px;
   }
-
   &--sm {
     padding-block: 60px;
   }
@@ -68,6 +67,10 @@
 
   &--base {
     max-width: 1140px;
+  }
+
+  &--nav {
+    max-width: 1188px;
   }
 
   &--lg {
