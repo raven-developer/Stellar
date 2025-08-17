@@ -1,3 +1,11 @@
+.px-section.px-nav {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  position: fixed;
+}
+
 .px-section--nav .px-container {
   transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }

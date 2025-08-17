@@ -1,13 +1,26 @@
-async function loadNav() {
+async function loadNavFoot() {
   try {
     const n = await fetch('px-assets/px-comp/nav/');
+    const f = await fetch('px-assets/px-comp/footer/');
+    const c = await fetch('px-assets/px-comp/copyright/');
     if (!n.ok) throw Error('Nav File Not Found');
+    if (!f.ok) throw Error('Footer File Not Found');
+    if (!c.ok) throw Error('Copyright File Not Found');
 
     const nCon = await n.text();
-    const h = document.getElementById('px-header');
-    if (!h) throw Error('Header Container Not Found');
+    const fCon = await f.text();
+    const cCon = await c.text();
 
-    h.innerHTML = nCon;
+    const hId = document.getElementById('px-header');
+    const fId = document.getElementById('px-footer');
+    const cId = document.getElementById('px-copyright');
+    if (!hId) throw Error('Header Container Not Found');
+    if (!fId) throw Error('Footer Container Not Found');
+    if (!cId) throw Error('Copyright Container Not Found');
+
+    hId.innerHTML = nCon;
+    fId.innerHTML = fCon;
+    cId.innerHTML = cCon;
 
     scrollNav();
     window.addEventListener('scroll', scrollNav);
@@ -16,7 +29,7 @@ async function loadNav() {
   }
 }
 
-loadNav();
+loadNavFoot();
 
 function setNavState(isSticky) {
   const nv = document.querySelector('.px-section--nav .px-container');
