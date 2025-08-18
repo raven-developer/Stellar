@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     setupHeroBackground();
     setupBackgroundImages();
     cloneCarouselItems();
-    loadNav();
+    loadNavFoot();
   } catch (error) {
     console.error('Error during DOMContentLoaded:', error);
   }

@@ -16,6 +16,10 @@
     flex-direction: column;
   }
 
+  &--social {
+    gap: 12px;
+  }
+
   li {
     margin: unset;
     margin-block: 0.5rem;

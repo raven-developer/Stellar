@@ -48,3 +48,36 @@
 .px-ftr__link-wrapper h2 {
   color: var(--black-30);
 }
+
+.px-copyright {
+  position: relative;
+  .px-marker--cst li {
+    padding: 0;
+  }
+
+  &__icon {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--black-20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content-block {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    max-width: 1140px;
+    width: 100%;
+    border-top: 1px solid var(--black-20);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
