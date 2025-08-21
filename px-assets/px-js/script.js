@@ -1,6 +1,8 @@
+import * as comp from 'px-assets/px-js/px-comp.js';
+
 document.addEventListener('DOMContentLoaded', async function () {
   try {
-    loadNavFoot();
+    comp.loadNavFoot();
     setupHeroBackground();
     setupBackgroundImages();
     cloneCarouselItems();
