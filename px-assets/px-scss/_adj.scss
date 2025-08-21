@@ -135,3 +135,12 @@
 .px-section--copyright .px-section__par {
   margin: unset;
 }
+
+.is_textcenter .px-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.px-section-id-h1s1 .px-section__par {
+  margin-bottom: 0;
+}

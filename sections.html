@@ -50,3 +50,111 @@ BUTTONS
 <a href="#" class="px-button px-button--solid">
   <span class="px-section__par px-button__text">Start your Stellar Journey</span>
 </a>
+
+
+
+<!-- INITIAL Entrance Animation -->
+function introAnim() {
+let navSec = document.querySelector('.px-section.px-nav');
+let h1s1 = document.querySelector('.px-section-id-h1s1');
+let h1s1Bg = document.querySelector('.px-section-id-h1s1 .px-background--hero');
+let h1s1CntTop = document.querySelector('.px-section-id-h1s1 .px-section__topl');
+let h1s1CntH = document.querySelector('.px-section-id-h1s1 .px-section__title');
+let h1s1CntT = document.querySelector('.px-section-id-h1s1 .px-section__par');
+let h1s1Btn = document.querySelector('.px-section-id-h1s1 .px-button');
+let h1s1Img = document.querySelector('.px-section-id-h1s1 .px-hero-image-wrapper');
+
+if (!navSec) throw Error('navSec not found');
+if (!h1s1) throw Error('h1s1 not found');
+if (!h1s1Bg) throw Error('h1s1Bg not found');
+if (!h1s1CntTop) throw Error('h1s1CntTop not found');
+if (!h1s1CntH) throw Error('h1s1CntH not found');
+if (!h1s1CntT) throw Error('h1s1CntT not found');
+if (!h1s1Btn) throw Error('h1s1Btn not found');
+if (!h1s1Img) throw Error('h1s1Img not found');
+
+// INITIAL
+navSec.style.cssText = `
+opacity: 0;
+transform: translateY(-100%) translateX(-50%) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,
+0deg);
+transition: none;
+transform-style: preserve-3d;
+`;
+
+h1s1CntTop.style.cssText = `
+opacity: 0;
+transform: translateY(0) translateX(0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+transition: none;
+transform-style: preserve-3d;
+`;
+
+h1s1CntH.style.cssText = `
+opacity: 0;
+transform: translateY(0) translateX(0) scale3d(1.2, 1.2, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+transition: none;
+transform-style: preserve-3d;
+`;
+
+h1s1CntT.style.cssText = `
+opacity: 0;
+transform: translateY(0) translateX(0) scale3d(1.2, 1.2, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+transition: none;
+transform-style: preserve-3d;
+`;
+
+h1s1Btn.style.cssText = `
+opacity: 0;
+transform: translateY(0) translateX(0) scale3d(1.2, 1.2, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+transition: none;
+transform-style: preserve-3d;
+`;
+
+const iObserv = new IntersectionObserver(
+(ents) => {
+ents.forEach((elmnt) => {
+if (elmnt.isIntersecting) {
+navSec.classList.toggle('cubic__01');
+h1s1Bg.classList.toggle('cubic__01');
+h1s1CntTop.classList.toggle('cubic__01');
+h1s1CntH.classList.toggle('cubic__01');
+h1s1CntT.classList.toggle('cubic__01');
+h1s1Btn.classList.toggle('cubic__01');
+
+navSec.style.cssText = `
+opacity: 1;
+transform: translateY(0) translateX(-50%) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+transition-delay: 400ms;
+`;
+
+h1s1CntTop.style.cssText = `
+opacity: 1;
+transform: translateY(0) translateX(0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+transition-delay: 300ms;
+`;
+
+h1s1CntH.style.cssText = `
+opacity: 1;
+transform: translateY(0) translateX(0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+transition-delay: 100ms;
+`;
+
+h1s1CntT.style.cssText = `
+opacity: 1;
+transform: translateY(0) translateX(0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+transition-delay: 100ms;
+`;
+
+h1s1Btn.style.cssText = `
+opacity: 1;
+transform: translateY(0) translateX(0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+transition-delay: 200ms;
+`;
+}
+});
+},
+{ threshold: 0 }
+);
+
+iObserv.observe(h1s1);
+}

@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', async function () {
   try {
-    masonryJS();
+    loadNavFoot();
     setupHeroBackground();
     setupBackgroundImages();
     cloneCarouselItems();
-    loadNavFoot();
+    masonryJS();
+    introAnim();
   } catch (error) {
     console.error('Error during DOMContentLoaded:', error);
   }
