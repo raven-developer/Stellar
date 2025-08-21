@@ -1,5 +1,3 @@
-import * as comp from 'px-assets/px-js/px-comp.js';
-
 document.addEventListener('DOMContentLoaded', async function () {
   try {
     comp.loadNavFoot();

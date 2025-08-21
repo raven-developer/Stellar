@@ -1,4 +1,4 @@
-export async function loadNavFoot() {
+async function loadNavFoot() {
   try {
     const n = await fetch('px-assets/px-comp/nav/');
     const f = await fetch('px-assets/px-comp/footer/');
