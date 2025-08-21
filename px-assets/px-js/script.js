@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', async function () {
     cloneCarouselItems();
     masonryJS();
     introAnim();
+    secAnim();
+    sec3Anim();
   } catch (error) {
     console.error('Error during DOMContentLoaded:', error);
   }
