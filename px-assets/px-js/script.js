@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function () {
   try {
-    comp.loadNavFoot();
+    loadNavFoot();
     setupHeroBackground();
     setupBackgroundImages();
     cloneCarouselItems();
