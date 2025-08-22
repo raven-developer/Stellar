@@ -198,7 +198,7 @@ function introAnim() {
         opacity: 1;
         transform: ${final};
         transform-style: preserve-3d;
-        transition: transform 0.6s cubic-bezier(0.19,1,0.22,1), opacity 0.6s cubic-bezier(0.19,1,0.22,1);
+        transition: transform 1s cubic-bezier(0.19,1,0.22,1), opacity 1s cubic-bezier(0.19,1,0.22,1);
         transition-delay: ${delay}ms;
       `;
     });
@@ -293,7 +293,7 @@ function secAnim() {
         transform-style: preserve-3d;
         transition-delay: ${delay}ms;
       `;
-      el.classList.add('cubic__02');
+      el.classList.add('cubic__01');
     });
   }
   init();
@@ -309,7 +309,7 @@ function secAnim() {
     { root: null, threshold: [0, 0.8, 1] }
   );
 
-  iObserve.observe(elements.h1s2);
+  iObserve.observe(elements.h1s2CntH);
 }
 
 function sec3Anim() {
@@ -377,34 +377,34 @@ function sec3Anim() {
     // prettier-ignore
     {
       el: elements.h1s3Img4644,
-      init: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      init: 'translateY(20%) translateX(0) scale3d(0.8, 0.8, 1)',
       final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 400
+      delay: 200
     },
     // prettier-ignore
     {
       el: elements.h1s3Img4642,
-      init: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      init: 'translateY(0) translateX(20%) scale3d(1, 1, 1)',
       final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 400,
+      delay: 100,
     },
     // prettier-ignore
     {
       el: elements.h1s3Img4643,
-      init: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      init: 'translateY(0) translateX(-20%) scale3d(1, 1, 1)',
       final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 400,
+      delay: 150,
     },
     // prettier-ignore
     {
       el: elements.h1s3Circle,
-      init: 'translate(-50%, -50%) scale3d(1, 1, 1)',
+      init: 'translate(-50%, -30%) scale3d(0.8, 0.8, 1)',
       final: 'translate(-50%, -50%) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 400,
+      delay: 0,
     },
   ];
 
@@ -461,13 +461,11 @@ function sec3Anim() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           final();
-        } else {
-          init();
         }
       });
     },
     { root: null, threshold: [0, 0.8, 1] }
   );
 
-  iObserv.observe(elements.h1s3);
+  iObserv.observe(elements.h1s3List);
 }
