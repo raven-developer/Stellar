@@ -1,8 +1,8 @@
 async function loadNavFoot() {
+  const n = await fetch('px-assets/px-comp/nav/');
+  const f = await fetch('px-assets/px-comp/footer/');
+  const c = await fetch('px-assets/px-comp/copyright/');
   try {
-    const n = await fetch('px-assets/px-comp/nav/');
-    const f = await fetch('px-assets/px-comp/footer/');
-    const c = await fetch('px-assets/px-comp/copyright/');
     if (!n.ok) throw Error('Nav File Not Found');
     const nCon = await n.text();
     const hId = document.getElementById('px-header');
@@ -24,7 +24,6 @@ async function loadNavFoot() {
     if (!cId) throw Error('Copyright Container Not Found');
     cId.innerHTML = cCon;
     socialMedia();
-
     scrollNav();
     window.addEventListener('scroll', scrollNav);
   } catch (err) {
@@ -69,4 +68,40 @@ async function socialMedia() {
       `;
     }
   }
+}
+
+function animation() {
+  const bdy = document.body;
+  if (!bdy) throw Error('Body Container Not Found');
+
+  const hId = document.getElementById('px-header');
+  if (!hId) throw Error('Header Container Not Found');
+
+  function init() {
+    hId.classList.remove('cubic__03');
+    hId.style.opacity = '0';
+    hId.style.transform = 'translateY(-100%) translateX(-50%)';
+    hId.style.transformStyle = 'preserve-3d';
+  }
+  function final() {
+    hId.classList.add('cubic__03');
+    hId.style.opacity = '1';
+    hId.style.transform = 'translateY(0) translateX(-50%)';
+    hId.style.transformStyle = 'preserve-3d';
+    hId.style.transitionDelay = '300ms';
+  }
+
+  init();
+
+  const iObserve = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0]; // only one target
+      if (entry.isIntersecting) {
+        final();
+      }
+    },
+    { root: null, threshold: [0, 1] }
+  );
+
+  iObserve.observe(bdy);
 }

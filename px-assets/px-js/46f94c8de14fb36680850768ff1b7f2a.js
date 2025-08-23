@@ -71,7 +71,6 @@ function cloneCarouselItems() {
 
 function introAnim() {
   const els = {
-    navSec: document.querySelector('.px-section.px-nav'),
     h1s1: document.querySelector('.px-section-id-h1s1'),
     h1s1Bg: document.querySelector('.px-section-id-h1s1 .px-background--hero'),
     h1s1CntTop: document.querySelector('.px-section-id-h1s1 .px-section__topl'),
@@ -87,39 +86,39 @@ function introAnim() {
 
   const items = [
     // prettier-ignore
-    { el: els.navSec,
-      init: 'translateY(-100%) translateX(-50%) scale3d(1, 1, 1)',
-      final: 'translateY(0) translateX(-50%) scale3d(1, 1, 1)',
-      opacity: 0,
-      delay: 400 
-    },
-    // prettier-ignore
     { el: els.h1s1CntTop, 
       init: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 300
+      delay: 800
     },
     // prettier-ignore
     { el: els.h1s1CntH, 
       init: 'translateY(0) translateX(0) scale3d(1.2, 1.2, 1)',
       final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 0 
+      delay: 500 
     },
     // prettier-ignore
     { el: els.h1s1CntT, 
       init: 'translateY(0) translateX(0) scale3d(1.2, 1.2, 1)',
       final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 100 
+      delay: 600 
     },
     // prettier-ignore
     { el: els.h1s1Btn, 
       init: 'translateY(0) translateX(0) scale3d(1.2, 1.2, 1)',
       final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 200 
+      delay: 700 
+    },
+    // prettier-ignore
+    { el: els.h1s1Bg, 
+      init: 'translateY(-50%) translateX(0) scale3d(1, 1, 1)',
+      final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      opacity: 0,
+      delay: 0 
     },
   ];
 
@@ -141,41 +140,41 @@ function introAnim() {
       init: 'translateY(0) translateX(0) scale3d(0.8, 0.8, 1)',
       final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 100 
+      delay: 600 
     },
     // prettier-ignore
     { elImg: hIms.blImg,
       init: 'translateY(0) translateX(0) scale3d(0.8, 0.8, 1)',
       final: 'translateY(0) translateX(0) scale3d(1.1, 1.1, 1)',
       opacity: 0,
-      delay: 200 
+      delay: 700 
     },
     // prettier-ignore
     { elImg: hIms.phImg,
       init: 'translateY(20%) translateX(-50%) scale3d(1.1, 1.1, 1)',
       final: 'translateY(0) translateX(-50%) scale3d(1, 1, 1)',
       opacity: 0,
-      delay:  100
+      delay:  600
     },
     // prettier-ignore
     { elImg: hIms.trImg,
       init: 'translateY(0) translateX(0) scale3d(0.8, 0.8, 1)',
       final: 'translateY(0) translateX(0) scale3d(1.1, 1.1, 1)',
       opacity: 0,
-      delay: 100 
+      delay: 600 
     },
     // prettier-ignore
     { elImg: hIms.brImg,
       init: 'translateY(0) translateX(0) scale3d(0.8, 0.8, 1)',
       final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
       opacity: 0,
-      delay: 200 
+      delay: 700 
     },
   ];
 
   function init() {
     imgItems.forEach(({ elImg, init, opacity }) => {
-      elImg.style.cssText = `
+      elImg.style.cssText += `
         opacity: ${opacity};
         transform: ${init};
         transition: none; /* snap back on reset */
@@ -183,7 +182,7 @@ function introAnim() {
     });
 
     items.forEach(({ el, init, opacity }) => {
-      el.style.cssText = `
+      el.style.cssText += `
         opacity: ${opacity};
         transform: ${init};
         transform-style: preserve-3d;
@@ -194,7 +193,7 @@ function introAnim() {
 
   function play() {
     items.forEach(({ el, final, delay }) => {
-      el.style.cssText = `
+      el.style.cssText += `
         opacity: 1;
         transform: ${final};
         transform-style: preserve-3d;
@@ -204,7 +203,7 @@ function introAnim() {
     });
 
     imgItems.forEach(({ elImg, final, delay }) => {
-      elImg.style.cssText = `
+      elImg.style.cssText += `
         opacity: 1;
         transform: ${final};
         transition: transform 1s cubic-bezier(0.19,1,0.22,1), opacity 1s cubic-bezier(0.19,1,0.22,1);
@@ -411,7 +410,6 @@ function sec3Anim() {
   function init() {
     sec_content.forEach(({ el, init, opacity }) => {
       el.classList.remove('cubic__01');
-      el.classList.remove('cubic__02');
       el.style.cssText = `
         opacity: ${opacity};
         transform: ${init};
@@ -421,8 +419,7 @@ function sec3Anim() {
     });
 
     sec_images.forEach(({ el, init, opacity }) => {
-      el.classList.remove('cubic__02');
-      el.classList.remove('cubic__01');
+      el.classList.remove('cubic__img');
       el.style.cssText = `
         opacity: ${opacity};
         transform: ${init};
@@ -444,7 +441,7 @@ function sec3Anim() {
     });
 
     sec_images.forEach(({ el, final, delay }) => {
-      el.classList.add('cubic__02');
+      el.classList.add('cubic__img');
       el.style.cssText = `
         opacity: 1;
         transform: ${final};
