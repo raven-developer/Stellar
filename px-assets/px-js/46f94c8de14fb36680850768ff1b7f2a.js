@@ -466,3 +466,167 @@ function sec3Anim() {
 
   iObserv.observe(elements.h1s3List);
 }
+
+function sec4Anim() {
+  const elements = {
+    h1s4Head: document.querySelector('.px-section-id-h1s4 .px-section__heading'),
+    h1s4TopL: document.querySelector('.px-section-id-h1s4 .px-section__topl'),
+    h1s4Par: document.querySelector('.px-section-id-h1s4 p.px-section__par'),
+    h1s4Field: document.querySelector('.px-section-id-h1s4 .px-form__field'),
+    h1s4Btn: document.querySelector('.px-section-id-h1s4 .px-button-wrapper'),
+    h1s4Note: document.querySelector('.px-section-id-h1s4 .px-section__note'),
+    h1s4Img4645: document.querySelector('.px-section-id-h1s4 .img-4645'),
+    h1s4Img4647: document.querySelector('.px-section-id-h1s4 .img-4647'),
+    h1s4Img4646: document.querySelector('.px-section-id-h1s4 .img-4646'),
+    h1s4Circle: document.querySelector('.px-section-id-h1s4 .px-circle-bg'),
+  };
+
+  for (const [key, element] of Object.entries(elements)) {
+    if (!element) throw Error(`${key} not found`);
+  }
+
+  const sec_content = [
+    // prettier-ignore
+    {
+      el: elements.h1s4Head,
+      init: 'translateY(0) translateX(40px) scale3d(1, 1, 1)',
+      final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      opacity: 0,
+      delay: 0
+    },
+    // prettier-ignore
+    {
+      el: elements.h1s4TopL,
+      init: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      opacity: 0,
+      delay: 600
+    },
+    // prettier-ignore
+    {
+      el: elements.h1s4Par,
+      init: 'translateY(0) translateX(40px) scale3d(1, 1, 1)',
+      final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      opacity: 0,
+      delay: 50
+    },
+    // prettier-ignore
+    {
+      el: elements.h1s4Field,
+      init: 'translateY(0) translateX(40px) scale3d(1, 1, 1)',
+      final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      opacity: 0,
+      delay: 150,
+    },
+    // prettier-ignore
+    {
+      el: elements.h1s4Btn,
+      init: 'translateY(0) translateX(40px) scale3d(1, 1, 1)',
+      final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      opacity: 0,
+      delay: 200,
+    },
+    // prettier-ignore
+    {
+      el: elements.h1s4Note,
+      init: 'translateY(0) translateX(40px) scale3d(1, 1, 1)',
+      final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      opacity: 0,
+      delay: 300,
+    },
+  ];
+
+  const sec_images = [
+    // prettier-ignore
+    {
+      el: elements.h1s4Circle,
+      init: 'translate(-50%, -30%) scale3d(0.8, 0.8, 1)',
+      final: 'translate(-50%, -50%) scale3d(1, 1, 1)',
+      opacity: 0,
+      delay: 0
+    },
+    // prettier-ignore
+    {
+      el: elements.h1s4Img4646,
+      init: 'translate(50px, 0) rotateY(60deg)',
+      final: 'translate(0, 0) rotateY(0deg)',
+      opacity: 0,
+      delay: 300
+    },
+    // prettier-ignore
+    {
+      el: elements.h1s4Img4645,
+      init: 'translate(-50px, 0) rotateY(60deg)',
+      final: 'translate(0, 0) rotateY(0deg)',
+      opacity: 0,
+      delay: 300
+    },
+    // prettier-ignore
+    {
+      el: elements.h1s4Img4647,
+      init: 'translateY(0) translateX(0) scale3d(0.8, 0.8, 1)',
+      final: 'translateY(0) translateX(0) scale3d(1, 1, 1)',
+      opacity: 0,
+      delay: 400
+    },
+  ];
+
+  function init() {
+    sec_content.forEach(({ el, init, opacity }) => {
+      el.classList.remove('cubic__01');
+      el.style.cssText = `
+        opacity: ${opacity};
+        transform: ${init};
+        transform-style: preserve-3d;
+        transition: none;
+      `;
+    });
+
+    sec_images.forEach(({ el, init, opacity }) => {
+      el.style.cssText = `
+        opacity: ${opacity};
+        transform: ${init};
+        transform-style: preserve-3d;
+        transition: none;
+      `;
+      el.classList.remove('cubic__img');
+    });
+  }
+
+  function play() {
+    sec_content.forEach(({ el, final, delay }) => {
+      el.classList.add('cubic__01');
+      el.style.cssText = `
+        opacity: 1;
+        transform: ${final};
+        transform-style: preserve-3d;
+        transition-delay: ${delay}ms;
+      `;
+    });
+
+    sec_images.forEach(({ el, final, delay }) => {
+      el.classList.add('cubic__img');
+      el.style.cssText = `
+        opacity: 1;
+        transform: ${final};
+        transform-style: preserve-3d;
+        transition-delay: ${delay}ms;
+      `;
+    });
+  }
+
+  init();
+
+  const iObserv = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          play();
+        }
+      });
+    },
+    { root: null, threshold: 0.2 }
+  );
+
+  iObserv.observe(elements.h1s4Head);
+}

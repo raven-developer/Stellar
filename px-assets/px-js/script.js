@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     introAnim();
     secAnim();
     sec3Anim();
+    sec4Anim();
     cloneCarouselItems();
     masonryJS();
   } catch (error) {
